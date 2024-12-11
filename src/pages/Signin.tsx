@@ -7,7 +7,7 @@ import React, { useContext, useState } from 'react';
 import UserContext, { defaultUser, User } from '../contexts/UserContext';
 import { useUnleashContext } from '@unleash/proxy-client-react';
 
-const SignIn = (): JSX.Element => {
+const Signin = (): JSX.Element => {
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
   const updateUnleashContext = useUnleashContext();
@@ -120,4 +120,4 @@ const SignIn = (): JSX.Element => {
   );
 };
 
-export default SignIn;
+export default Signin;

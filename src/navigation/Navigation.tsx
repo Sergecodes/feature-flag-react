@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Add from '../pages/Add';
 import Home from '../pages/Home';
 import Cards from '../pages/Cards';
-import SignIn from '../pages/SignIn';
+import Signin from '../pages/Signin';
 import Profile from '../pages/Profile';
 import Savings from '../pages/Savings';
 import Transactions from '../pages/Transactions';
@@ -16,7 +16,7 @@ const Navigation = (): JSX.Element => {
 
   return (
     <Routes>
-      <Route path='/' element={<SignIn />} />
+      <Route path='/' element={<Signin />} />
       <Route path='/add' element={<Add />} />
       <Route path='/home' element={<Home />} />
       <Route path='/profile' element={<Profile />} />
