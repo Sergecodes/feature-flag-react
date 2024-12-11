@@ -274,6 +274,10 @@ header .header-button span {
   border: 2px solid #190537;
 }
 
+.form-select {
+  padding: 3px;
+}
+
 .button {
   width: 100%;
   padding: 10px;

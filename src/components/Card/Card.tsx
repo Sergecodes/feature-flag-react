@@ -64,11 +64,11 @@ const Card = ({ number, cvcNumber, validUntil, cardHolder }: IProps): JSX.Elemen
     <div className='card-balance flex flex-v-center flex-space-between'>
       <div className='flex flex-col flex-h-center flex-1 center'>
         <h3>Balance</h3>
-        <span>€ 783.45</span>
+        <span>XAF 750.45</span>
       </div>
       <div className='flex flex-col flex-h-center flex-1 center'>
         <h3>Limit</h3>
-        <span>€ 1250.00</span>
+        <span>XAF 2 000 000.00</span>
       </div>
     </div>
   </>

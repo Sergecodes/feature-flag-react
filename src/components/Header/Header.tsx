@@ -1,15 +1,28 @@
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
+import { useFlag } from '@unleash/proxy-client-react';
 
 import { Link } from 'react-router-dom';
+import UserContext from '../../contexts/UserContext';
 
 const Header = (): JSX.Element => {
+  const { user } = useContext(UserContext);
+  const cardsEnabled = useFlag('cardsEnabled');
+  const transactionsEnabled = useFlag('transactionsEnabled');
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
     <header className='flex flex-v-center flex-space-between'>
       <div className='header-profile flex flex-1'>
         <Link to='/profile'>
-          <div className='profile-photo' style={{ backgroundImage: 'url("images/profile.jpg")' }} />
+          <div
+            className='profile-photo'
+            style={{
+              backgroundImage:
+                user.gender === 'Male'
+                  ? `url("images/profile-man.jpg")`
+                  : `url("images/meme2.jpg")`,
+            }}
+          />
         </Link>
       </div>
       <div className='header-center'>
@@ -29,12 +42,16 @@ const Header = (): JSX.Element => {
         </div>
       </div>
       <div className='header-buttons flex flex-1 flex-v-center flex-end'>
-        <Link to='/transactions' className='header-button flex flex-v-center flex-h-center'>
-          <span className='material-symbols-outlined'>equalizer</span>
-        </Link>
-        <Link to='/cards' className='header-button flex flex-v-center flex-h-center'>
-          <span className='material-symbols-outlined'>credit_card</span>
-        </Link>
+        {transactionsEnabled && (
+          <Link to='/transactions' className='header-button flex flex-v-center flex-h-center'>
+            <span className='material-symbols-outlined'>equalizer</span>
+          </Link>
+        )}
+        {cardsEnabled && (
+          <Link to='/cards' className='header-button flex flex-v-center flex-h-center'>
+            <span className='material-symbols-outlined'>credit_card</span>
+          </Link>
+        )}
       </div>
     </header>
   );
