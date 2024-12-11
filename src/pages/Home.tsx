@@ -8,7 +8,7 @@ import Divider from '../components/Divider/Divider';
 
 const Home = (): JSX.Element => (
   <Layout>
-    <Balance balance={1325.5} currency='EURO' currencySymbol='€' />
+    <Balance balance={750.45} currency='XAF ' currencySymbol='XAF ' />
 
     <Actions />
 

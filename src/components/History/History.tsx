@@ -27,22 +27,22 @@ const History = ({
         item={{
           id: 1,
           icon: 'coffee',
-          time: '15:34',
+          time: '08:10',
           name: 'Coffee',
-          amount: 3.25,
+          amount: 250,
           color: 'purple',
-          currencySymbol: '€',
+          currencySymbol: 'XAF ',
         }}
       />
       <HistoryLine
         item={{
           id: 2,
-          icon: 'hotel',
-          time: '12:21',
-          name: 'Hotel booking',
-          amount: 323.26,
+          icon: 'restaurant',
+          time: '12:45',
+          name: 'Restaurant booking',
+          amount: 25000.0,
           color: 'yellow',
-          currencySymbol: '€',
+          currencySymbol: 'XAF ',
         }}
       />
       <HistoryLine
@@ -51,9 +51,9 @@ const History = ({
           icon: 'sync',
           time: '11:46',
           name: 'Subscription payment',
-          amount: 9.99,
+          amount: 4999.99,
           color: 'orange',
-          currencySymbol: '€',
+          currencySymbol: 'XAF ',
         }}
       />
       <HistoryLine
@@ -62,20 +62,9 @@ const History = ({
           icon: 'water',
           time: '10:51',
           name: 'Water bill',
-          amount: 54.21,
+          amount: 540.21,
           color: 'gray',
-          currencySymbol: '€',
-        }}
-      />
-      <HistoryLine
-        item={{
-          id: 5,
-          icon: 'water',
-          time: '09:14',
-          name: 'Supermarket',
-          amount: 78.12,
-          color: 'red',
-          currencySymbol: '€',
+          currencySymbol: 'XAF ',
         }}
       />
       <HistoryLine
@@ -83,21 +72,32 @@ const History = ({
           id: 5,
           icon: 'local_activity',
           time: '09:14',
-          name: 'Tickets',
-          amount: 78.12,
+          name: 'Supermarket',
+          amount: 125800.0,
           color: 'blue',
-          currencySymbol: '€',
+          currencySymbol: 'XAF ',
         }}
       />
+      {/*<HistoryLine*/}
+      {/*  item={{*/}
+      {/*    id: 5,*/}
+      {/*    icon: 'local_activity',*/}
+      {/*    time: '09:14',*/}
+      {/*    name: 'Tickets',*/}
+      {/*    amount: 78.12,*/}
+      {/*    color: 'blue',*/}
+      {/*    currencySymbol: 'XAF ',*/}
+      {/*  }}*/}
+      {/*/>*/}
       <HistoryLine
         item={{
           id: 5,
           icon: 'bolt',
           time: '07:33',
           name: 'Electricty bill',
-          amount: 43.55,
+          amount: 1900.55,
           color: 'green',
-          currencySymbol: '€',
+          currencySymbol: 'XAF ',
         }}
       />
       {!detailed && (
